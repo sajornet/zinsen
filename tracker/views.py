@@ -16,3 +16,15 @@ def provider_list(request):
     }
 
     return render(request, 'tracker/provider_list.html', context)
+
+def impressum(request):
+    return render(request, 'tracker/impressum.html')
+
+def pp(request):
+    return render(request, 'tracker/pp.html')
+
+def tc(request):
+    return render(request, 'tracker/tc.html')
+
+def contact(request):
+    return render(request, 'tracker/contact.html')

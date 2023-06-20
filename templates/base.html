@@ -42,10 +42,11 @@
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container text-center">
             <ul class="list-inline mb-0">
-                <li class="list-inline-item"><a href="#">Terms and Conditions</a></li>
-                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="{% url 'tracker:provider_list' %}">Start</a></li>
+                <li class="list-inline-item"><a href="{% url 'tracker:tc' %}">Terms and Conditions</a></li>
+                <li class="list-inline-item"><a href="{% url 'tracker:pp' %}">Privacy Policy</a></li>
                 <li class="list-inline-item"><a href="#">Contact</a></li>
-                <li class="list-inline-item"><a href="#">Impressum</a></li>
+                <li class="list-inline-item"><a href="{% url 'tracker:impressum' %}">Impressum</a></li>
             </ul>
         </div>
     </footer>
