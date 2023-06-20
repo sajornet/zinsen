@@ -14,7 +14,6 @@ class Provider(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
     url = models.CharField(max_length=200)
-    logo = models.ImageField(upload_to='logos/', default='logos/default.png')
 
     def __str__(self):
         return self.name
@@ -24,7 +23,7 @@ class Offering(models.Model):
     provider = models.ForeignKey(Provider, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     url = models.CharField(max_length=200)
-    logo = models.ImageField(upload_to='logos/', default='logos/default.png')
+    logo = models.CharField(max_length=300)
     description = models.CharField(max_length=1000)
     interest_rate = models.DecimalField(max_digits=5, decimal_places=2)
     minimum = models.IntegerField(default=0)
