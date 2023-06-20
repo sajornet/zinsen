@@ -30,9 +30,6 @@ DEBUG = os.getenv("DEBUG", "True") == "True"
 PRODUCTION_MODE = os.getenv("PRODUCTION_MODE", "False") == "True"
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
-ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
