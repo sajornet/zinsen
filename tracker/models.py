@@ -24,12 +24,12 @@ class Offering(models.Model):
     name = models.CharField(max_length=200)
     url = models.CharField(max_length=200)
     logo = models.CharField(max_length=300)
-    description = models.CharField(max_length=1000)
+    description = models.TextField(max_length=1000)
     interest_rate = models.DecimalField(max_digits=5, decimal_places=2)
-    minimum = models.IntegerField(default=0)
-    maximum = models.IntegerField(default=0)
-    minimum_term = models.IntegerField(default=0)
-    maximum_term = models.IntegerField(default=0)
+    minimum = models.CharField(max_length=30, null=True, blank=True)
+    maximum = models.CharField(max_length=30, null=True, blank=True)
+    minimum_term = models.CharField(max_length=30, null=True, blank=True)
+    maximum_term = models.CharField(max_length=30, null=True, blank=True)
 
     def __str__(self):
         return self.name
